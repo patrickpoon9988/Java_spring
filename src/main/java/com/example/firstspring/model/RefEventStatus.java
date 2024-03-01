@@ -1,11 +1,13 @@
 package com.example.firstspring.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class RefEventStatus {
 
     // private fields
+    @Id
     private int status_id;
     private String status_desc;
 
