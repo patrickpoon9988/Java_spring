@@ -1,0 +1,11 @@
+type Query {
+    hello: String
+    contractEvent: [ContractEvent]
+}
+
+type ContractEvent {
+    event_id: Int
+    image_name: String
+    batch_name: String
+    quarter_name: String
+}
