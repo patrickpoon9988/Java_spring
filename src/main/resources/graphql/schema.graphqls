@@ -1,6 +1,7 @@
 type Query {
     hello: String
     contractEvent: [ContractEvent]
+    contractImage(image_id: Int): [ContractImage]
 }
 
 type ContractEvent {
@@ -8,4 +9,13 @@ type ContractEvent {
     image_name: String
     batch_name: String
     quarter_name: String
+}
+
+type ContractImage {
+    image_id: Int
+    image_name: String
+    hmd: String
+    road_name: String
+    contract_name: String
+    false_negative_type: String
 }

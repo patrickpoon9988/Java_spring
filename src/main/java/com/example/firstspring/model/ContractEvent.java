@@ -1,6 +1,11 @@
 package com.example.firstspring.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class ContractEvent {
+    @Id
     private int event_id;
 
     private String image_name;
@@ -9,12 +14,12 @@ public class ContractEvent {
 
     private String quarter_name;
 
-    public ContractEvent(int id, String imageName, String BatchName, String QuarterName) {
-        event_id = id;
-        image_name = imageName;
-        batch_name = BatchName;
-        quarter_name = QuarterName;
-    }
+    // public ContractEvent(int id, String imageName, String BatchName, String QuarterName) {
+    //     event_id = id;
+    //     image_name = imageName;
+    //     batch_name = BatchName;
+    //     quarter_name = QuarterName;
+    // }
 
     public int getEventId() {
         return event_id;
