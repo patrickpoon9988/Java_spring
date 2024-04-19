@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,7 +33,8 @@ public class GraphQLController {
     }
 
     @QueryMapping
-    public List<ContractImage> contractImage() {
+    public List<ContractImage> contractImage(@Argument int image_id) {
+        System.out.println(image_id);
         return contractImageRepository.findAll();
     }
 }
